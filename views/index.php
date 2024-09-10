@@ -1,5 +1,15 @@
-<?php include 'partials/header.php' ?>
+<?php 
+$posts = [
+  ['title' => 'Title1', 'body' => 'Body1'],
+  ['title' => 'Title1', 'body' => 'Body1'],
+  ['title' => 'Title1', 'body' => 'Body1'],
+  ['title' => 'Title1', 'body' => 'Body1'],
+  ['title' => 'Title1', 'body' => 'Body1'],
+]
 
+?>
+
+<?php include 'partials/header.php' ?>
 <!doctype html>
 
 <html lang="en">
