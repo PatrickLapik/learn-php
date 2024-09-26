@@ -1,21 +1,21 @@
-<?php include 'partials/header.php'; ?>
+<?php view('partials/header'); ?>
 
 <main class="container">
-  <?php include 'partials/hero.php'; ?>
-  <?php include 'partials/featured.php'; ?>
+  <?php view('partials/hero'); ?>
+  <?php view('partials/featured'); ?>
   
 
   <div class="row g-5">
     <div class="col-md-8">
-      <?php include 'partials/posts.php'; ?>
+      <?php view('partials/posts', compact('posts')); ?>
 
     </div>
 
     <div class="col-md-4">
-      <?php include 'partials/side.php'; ?>
+      <?php view('partials/side'); ?>
     </div>
   </div>
 
 </main>
 
-<?php include 'partials/footer.php'; ?>
+<?php view('partials/footer'); ?>

@@ -1,4 +1,3 @@
-
 <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
   <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
   <p class="mb-0">
@@ -7,5 +6,6 @@
 </footer>
 <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    </body>
+</body>
+
 </html>

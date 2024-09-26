@@ -1,4 +1,4 @@
-<?php include 'partials/header.php'; ?>
+<?php view('partials/header'); ?>
 
 <main class="container">
   <?php if($fname): ?>
@@ -15,4 +15,4 @@
   </form>
 </main>
 
-<?php include 'partials/footer.php'; ?>
+<?php view('partials/footer'); ?>

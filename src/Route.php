@@ -1,23 +1,30 @@
 <?php
+
 namespace App;
+
 use App\Router;
 
-class Route {
-    public $path;
-    public $action;
-    public $method;
+class Route
+{
+  public $path;
+  public $action;
+  public $method;
+  public $params = [];
 
-    public function __construct($method, $path, $action)
-    {
-        $this->method = $method;
-        $this->path = $path;
-        $this->action = $action;
-    }
+  public function __construct($method, $path, $action)
+  {
+    $this->method = $method;
+    $this->path = $path;
+    $this->action = $action;
+  }
 
-    public static function get($path, $action){
-        Router::addRoute('GET',$path,$action);
-    }
-    public static function post($path, $action){
-        Router::addRoute('POST', $path,$action);
-    }
+  public static function get($path, $action)
+  {
+    Router::addRoute('GET', $path, $action);
+  }
+  public static function post($path, $action)
+  {
+    Router::addRoute('POST', $path, $action);
+  }
 }
+
