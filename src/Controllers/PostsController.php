@@ -26,7 +26,23 @@ class PostsController
   }
   public function getById($id)
   {
-    $post = Post::getById($id)[0];
+    $post = Post::getById($id);
     view('posts/view', compact('post'));
+  }
+  public function edit($id){
+    $post = Post::getById($id);
+    view('posts/edit', compact('post'));
+  }
+  public function update($id) {
+    $post = Post::getById($id);
+    $post->title = $_POST['title'];
+    $post->body = $_POST['body'];
+    $post->save();
+    redirect('/admin/posts');
+  }
+  public function destroy($id) {
+    $post = Post::getById($id);
+    $post->delete();
+    redirect('/admin/posts');
   }
 }

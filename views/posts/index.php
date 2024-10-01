@@ -16,8 +16,8 @@
                     <td>
                         <div class="btn-group" role="group">
                         <a class="btn btn-info" href="/admin/posts/<?=$post->id?>">View</a>
-                            <a class="btn btn-warning">Edit</a>
-                            <a class="btn btn-danger">Delete</a>
+                        <a class="btn btn-warning" href="/admin/posts/edit/<?=$post->id?>">Edit</a>
+                        <a class="btn btn-danger" href="/admin/posts/delete/<?=$post->id?>">Delete</a>
                         </div>
                     </td>
                 </tr>

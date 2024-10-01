@@ -47,6 +47,27 @@ class DB
     $stmt = $this->conn->prepare("SELECT * FROM $table WHERE id=$id");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_CLASS, $class);
-    return $stmt->fetchAll();
+    return $stmt->fetch();
+  }
+
+  public function update($table, $fields, $id) 
+  {
+    $updateText = '';
+    foreach($fields as $key=>$value) {
+      $updateText .= "$key='$value', ";
+    }
+    $updateText = substr($updateText,0,-2);
+
+    $sql = "UPDATE $table SET $updateText WHERE id=$id";
+
+    $stmt = $this->conn->prepare($sql);
+
+    $stmt->execute();
+  }
+
+  public function delete($table, $id) {
+    $sql = "DELETE FROM $table WHERE id=$id";
+
+    $this->conn->exec($sql);
   }
 }
